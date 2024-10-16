@@ -10,13 +10,8 @@ import {
 export const itemsSider: MenuProps['items'] = [
 	{
 		icon: React.createElement(DashboardOutlined),
-		label: 'Realtime',
-		key: 'realtime'
-	},
-	{
-		icon: React.createElement(InboxOutlined),
-		label: 'Resource Management',
-		key: 'resource-management'
+		label: 'Dashboard',
+		key: 'dashboard'
 	},
 	{
 		icon: React.createElement(UserOutlined),

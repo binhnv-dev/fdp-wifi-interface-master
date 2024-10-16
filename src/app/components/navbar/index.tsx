@@ -1,28 +1,18 @@
 'use client';
-import React, { useState } from 'react';
-import {
-	MenuFoldOutlined,
-	MenuUnfoldOutlined,
-	UploadOutlined,
-	UserOutlined,
-	VideoCameraOutlined
-} from '@ant-design/icons';
+import React from 'react';
+import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 import { Button, Layout, Menu, theme } from 'antd';
 
-const { Header } = Layout;
-const NavBar: React.FC = () => {
-	const [collapsed, setCollapsed] = useState(false);
-	const {
-		token: { colorBgContainer, borderRadiusLG }
-	} = theme.useToken();
+interface IProps {
+	collapsed: boolean;
+	setCollapsed: React.Dispatch<React.SetStateAction<boolean>>;
+}
+const NavBar: React.FC<IProps> = (props: IProps) => {
+	const { collapsed, setCollapsed } = props;
+	const { Header } = Layout;
 	return (
 		<>
-			<Header
-				style={{
-					padding: 0,
-					background: colorBgContainer
-				}}
-			>
+			<Header className="p-0 bg-[#fff] rounded-lg">
 				<Button
 					type="text"
 					icon={
@@ -33,11 +23,7 @@ const NavBar: React.FC = () => {
 						)
 					}
 					onClick={() => setCollapsed(!collapsed)}
-					style={{
-						fontSize: '16px',
-						width: 64,
-						height: 64
-					}}
+					className="!w-16 h-16 text-base"
 				/>
 			</Header>
 		</>

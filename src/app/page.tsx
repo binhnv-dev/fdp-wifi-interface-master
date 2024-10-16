@@ -1,12 +1,6 @@
-import DashBoard from './(admin)/dashboard/page';
+import AdminPage from './(admin)/page';
 
 const Home = () => {
-	return (
-		<>
-			<div className="max-h-screen">
-				<DashBoard />
-			</div>
-		</>
-	);
+	return <>{/* <AdminPage /> */}</>;
 };
 export default Home;
