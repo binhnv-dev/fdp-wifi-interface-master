@@ -1,9 +1,10 @@
 'use client';
 
+import SensorList from '@/app/components/sensorList';
 import React from 'react';
 
 const DashBoard = () => {
-	return <h1>Dashboard Page</h1>;
+	return <SensorList />;
 };
 
 export default DashBoard;
